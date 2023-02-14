@@ -19,7 +19,7 @@ class Flower(pygame.sprite.Sprite):
         self.rect.topleft = [pos_x, pos_y]
 
     def update(self, speed):
-        # We go to the next image in the array (we use 0.02 to slow down the animation because the int casting at
+        # We go to the next image in the array (we use 0.02 to slow down the animation because of the int casting at
         # line 30 will round it to the next integer -> 0.02 rounded to 1, 0.04 rounded to 1 etc.)
         self.actual_sprite += speed
 
