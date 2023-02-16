@@ -27,8 +27,8 @@ class Flower(pygame.sprite.Sprite):
         self.rect.topleft = [pos_x, pos_y]
 
     def update(self, speed):
-        # We go to the next image in the array (we use 0.02 to slow down the animation because of the int casting at
-        # line 30 will round it to the next integer -> 0.02 rounded to 1, 0.04 rounded to 1 etc.)
+        # We go to the next image in the array (we use a value inferior to 0 to slow down the animation because of the
+        # int casting will round it to the next integer)
         self.actual_sprite += speed
 
         # the indexes of the array are limited, there will be an error if it goes past the maximum index
@@ -63,8 +63,8 @@ class Zombie(pygame.sprite.Sprite):
         self.rect.topleft = [pos_x, pos_y]
 
     def update(self, speed):
-        # We go to the next image in the array (we use 0.02 to slow down the animation because of the int casting at
-        # line 30 will round it to the next integer -> 0.02 rounded to 1, 0.04 rounded to 1 etc.)
+        # We go to the next image in the array (we use a value inferior to 0 to slow down the animation because of the
+        # int casting will round it to the next integer)
         self.actual_sprite += speed
 
         # the indexes of the array are limited, there will be an error if it goes past the maximum index
@@ -108,8 +108,8 @@ class Spider(pygame.sprite.Sprite):
         self.rect.topleft = [pos_x, pos_y]
 
     def update(self, speed):
-        # We go to the next image in the array (we use 0.02 to slow down the animation because of the int casting at
-        # line 30 will round it to the next integer -> 0.02 rounded to 1, 0.04 rounded to 1 etc.)
+        # We go to the next image in the array (we use a value inferior to 0 to slow down the animation because of the
+        # int casting will round it to the next integer)
         self.actual_sprite += speed
 
         # the indexes of the array are limited, there will be an error if it goes past the maximum index
@@ -144,8 +144,8 @@ class Bee(pygame.sprite.Sprite):
         self.rect.topleft = [pos_x, pos_y]
 
     def update(self, speed):
-        # We go to the next image in the array (we use 0.02 to slow down the animation because of the int casting at
-        # line 30 will round it to the next integer -> 0.02 rounded to 1, 0.04 rounded to 1 etc.)
+        # We go to the next image in the array (we use a value inferior to 0 to slow down the animation because of the
+        # int casting will round it to the next integer)
         self.actual_sprite += speed
 
         # the indexes of the array are limited, there will be an error if it goes past the maximum index
@@ -211,6 +211,6 @@ while True:
     moving_sprites_spider.update(0.15)
     moving_sprites_bee.update(0.5)
 
-    # - Update what id displayed on the screen
+    # - Update what is displayed on the screen
     pygame.display.flip()
     clock.tick(60)
