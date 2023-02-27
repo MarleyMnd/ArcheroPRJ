@@ -38,7 +38,7 @@ class Flower(pygame.sprite.Sprite):
         # We also need to update the image to be displayed
         self.image = self.sprites_flower[int(self.actual_sprite)]
 
-
+# Zombie class
 class Zombie(pygame.sprite.Sprite):
     """To animate the bee."""
     def __init__(self, pos_x, pos_y):
@@ -75,6 +75,7 @@ class Zombie(pygame.sprite.Sprite):
         self.image = self.sprites_zombie[int(self.actual_sprite)]
 
 
+# Spider class
 class Spider(pygame.sprite.Sprite):
     """To animate the bee."""
     def __init__(self, pos_x, pos_y):
@@ -120,6 +121,7 @@ class Spider(pygame.sprite.Sprite):
         self.image = self.sprites_spider[int(self.actual_sprite)]
 
 
+# Bee class
 class Bee(pygame.sprite.Sprite):
     """To animate the bee."""
     def __init__(self, pos_x, pos_y):
